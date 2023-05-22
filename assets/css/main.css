@@ -83,7 +83,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #252122;
+		background: #1e191a;
 		background-image: url("images/bg02.png");
 	}
 
@@ -101,7 +101,7 @@ input, select, textarea {
 	body, input, textarea, select {
 		font-family: 'Source Sans Pro';
 		font-weight: 300;
-		color: #5d5d5d;
+		color: #F4EEE0;
 		font-size: 14pt;
 		line-height: 1.75em;
 	}
@@ -134,12 +134,12 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #252122;
+		color: #F4EEE0;
 		font-weight: 700;
 	}
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-		color: inherit;
+		color: #ffffff;
 		text-decoration: none;
 	}
 
@@ -152,7 +152,7 @@ input, select, textarea {
 	}
 
 	a {
-		color: #d52349;
+		color: #c5c4c4;
 		text-decoration: underline;
 	}
 
@@ -1548,7 +1548,7 @@ input, select, textarea {
 		header.major {
 			position: relative;
 			text-align: center;
-			border-top: solid 1px #ccc;
+			border-top: solid 1px #F4EEE0;
 			top: 1em;
 			margin: 0 0 3em 0;
 		}
@@ -1568,9 +1568,15 @@ input, select, textarea {
 
 /* Box */
 
+	.box-post-size {
+		/* margin: 0 200px 0 200px; */
+		/* max-width: 680px; */
+		min-width: 100px;
+	}
+
 	.box {
-		background: #ffffff;
-		border-bottom: solid 1px #ccc;
+		background: #1e191a;
+		/* border-bottom: solid 1px #950740; */
 		padding: 2.75em 1.75em 2.75em 1.75em;
 	}
 
@@ -1615,7 +1621,7 @@ input, select, textarea {
 		border: 0;
 		border-radius: 5px;
 		background: #d52349;
-		color: #fff !important;
+		color: #FFFFFF !important;
 		font-weight: 700;
 		outline: 0;
 		font-size: 1.1em;
@@ -1879,7 +1885,7 @@ input, select, textarea {
 	}
 
 		ul.divided li {
-			border-top: solid 1px #ddd;
+			border-top: solid 1px #353434;
 			padding: 1em 0 1em 0;
 		}
 
@@ -2066,8 +2072,8 @@ input, select, textarea {
 
 	#header {
 		position: relative;
-		background: #ffffff;
-		border-bottom: solid 1px #ccc;
+		background: #1e191a;
+		border-bottom: solid 1px #950740;
 		padding: 5em 0 4em 0;
 		text-align: center;
 	}
@@ -2102,7 +2108,7 @@ input, select, textarea {
 
 				#nav > ul > li > a {
 					border-radius: 5px;
-					color: #5d5d5d;
+					color: #F4EEE0;
 					text-decoration: none;
 					padding: 0.6em 1.2em 0.6em 1.2em;
 					-moz-transition: background-color .25s ease-in-out;
@@ -2113,7 +2119,7 @@ input, select, textarea {
 				}
 
 				#nav > ul > li:hover > a, #nav > ul > li.active > a {
-					background: #f3f3f3;
+					background: #353132;
 				}
 
 				#nav > ul > li.current > a {
@@ -2230,7 +2236,7 @@ input, select, textarea {
 			z-index: 1;
 		}
 
-			#intro .middle:before {
+			/* #intro .middle:before {
 				content: '';
 				width: 32px;
 				height: 100%;
@@ -2252,7 +2258,7 @@ input, select, textarea {
 				display: block;
 				z-index: -1;
 				box-shadow: -32px 0 0 0 #fff, 0 -32px 0 0 #fff, 0 32px 0 0 #fff, -32px 32px 0 0 #fff, -32px -32px 0 0 #fff, 0 0 32px 0 rgba(0, 0, 0, 0.15);
-			}
+			} */
 
 		#intro .button {
 			min-width: 12em;
@@ -2266,7 +2272,8 @@ input, select, textarea {
 
 	#main {
 		position: relative;
-		background: #f7f7f7 url("images/bg02.png");
+		background: #252122 url("images/bg02.png");
+		border-bottom: solid 1px #950740;
 		padding: 4em 0 4em 0;
 	}
 
@@ -2283,7 +2290,7 @@ input, select, textarea {
 		}
 
 		#main .major h2 {
-			background: #f7f7f7 url("images/bg02.png");
+			background: #222227 url("images/bg02.png");
 		}
 
 /* Footer */

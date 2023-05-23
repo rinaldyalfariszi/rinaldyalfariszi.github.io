@@ -106,9 +106,14 @@ input, select, textarea {
 		line-height: 1.75em;
 	}
 
-	strong, b {
-		color: #252122;
-		font-weight: 400;
+	strong {
+		color: #ff4770;
+		font-weight: 600;
+	}
+
+	b {
+		color: #F4EEE0;
+		font-weight: 600;
 	}
 
 	i, em {
@@ -139,7 +144,7 @@ input, select, textarea {
 	}
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-		color: #ffffff;
+		color: #F4EEE0;
 		text-decoration: none;
 	}
 
@@ -1576,7 +1581,7 @@ input, select, textarea {
 
 	.box {
 		background: #1e191a;
-		/* border-bottom: solid 1px #950740; */
+		border-bottom: solid 1px #950740;
 		padding: 2.75em 1.75em 2.75em 1.75em;
 	}
 
@@ -1621,7 +1626,7 @@ input, select, textarea {
 		border: 0;
 		border-radius: 5px;
 		background: #d52349;
-		color: #FFFFFF !important;
+		color: #F4EEE0 !important;
 		font-weight: 700;
 		outline: 0;
 		font-size: 1.1em;
@@ -1933,44 +1938,44 @@ input, select, textarea {
 					line-height: 1.5em;
 				}
 
-				ul.social li a.fa-facebook {
-					background: #3c5a98;
-				}
-
-					ul.social li a.fa-facebook:hover {
-						background: #4c6aa8;
-					}
-
-				ul.social li a.fa-twitter {
-					background: #2daae4;
-				}
-
-					ul.social li a.fa-twitter:hover {
-						background: #3dbaf4;
-					}
-
-				ul.social li a.fa-dribbble {
-					background: #c4376b;
-				}
-
-					ul.social li a.fa-dribbble:hover {
-						background: #d4477b;
-					}
-
 				ul.social li a.fa-linkedin {
-					background: #006599;
+					background: #d52349;
 				}
 
 					ul.social li a.fa-linkedin:hover {
-						background: #1075a9;
+						background: #e53359;
 					}
 
-				ul.social li a.fa-tumblr {
-					background: #2b4661;
+				ul.social li a.fa-google-drive {
+					background: #d52349;
 				}
 
-					ul.social li a.fa-tumblr:hover {
-						background: #3b5671;
+					ul.social li a.fa-google-drive:hover {
+						background: #e53359;
+					}
+
+				ul.social li a.fa-youtube {
+					background: #d52349;
+				}
+
+					ul.social li a.fa-youtube:hover {
+						background: #e53359;
+					}
+
+				ul.social li a.fa-instagram {
+					background: #d52349;
+				}
+
+					ul.social li a.fa-instagram:hover {
+						background: #e53359;
+					}
+
+				ul.social li a.fa-artstation {
+					background: #d52349;
+				}
+
+					ul.social li a.fa-artstation:hover {
+						background: #e53359;
 					}
 
 				ul.social li a.fa-google-plus {
@@ -2079,7 +2084,7 @@ input, select, textarea {
 	}
 
 		#header h1 {
-			color: #252122;
+			color: #f4eee0;
 			font-weight: 900;
 			font-size: 2.5em;
 			letter-spacing: -0.035em;
@@ -2197,14 +2202,14 @@ input, select, textarea {
 		}
 
 			#banner header h2 {
-				color: #fff;
+				color: #F4EEE0;
 				font-weight: 700;
 				font-size: 2.5em;
 				margin: 0 0 0.65em 0;
 			}
 
 			#banner header p {
-				color: #d52349;
+				color: #ff4770;
 				padding: 0;
 				font-style: normal;
 				margin: 0;
@@ -2212,6 +2217,14 @@ input, select, textarea {
 			}
 
 /* Intro */
+	
+	.intro-text-container {
+		margin: 50px 50px 50px 50px;
+	}
+
+	.intro-text-container h2 {
+		margin: 150px 50px 25px 50px;
+	}
 
 	#intro {
 		text-align: center;
@@ -2318,7 +2331,7 @@ input, select, textarea {
 		}
 
 		#footer h2, #footer h3, #footer h4, #footer h5, #footer h6, #footer strong, #footer b {
-			color: #fff;
+			color: #F4EEE0;
 		}
 
 			#footer h2 a, #footer h3 a, #footer h4 a, #footer h5 a, #footer h6 a, #footer strong a, #footer b a {
@@ -2856,7 +2869,7 @@ input, select, textarea {
 			}
 
 				#header h1 {
-					color: #252122;
+					color: #f4eee0;
 					font-weight: 900;
 					font-size: 1.75em;
 					letter-spacing: -0.035em;

@@ -1535,14 +1535,44 @@ input, select, textarea {
 		text-align: center;
 	}
 
+	.article-header-image {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+	}
+
+	.article-date-section p {
+		margin-top: -1em;
+		margin-bottom: 1em;
+	}
+
+	.article-information {
+		border-top: solid 1px #383735;
+		border-bottom: solid 1px #383735;
+		padding: 10px 10px;
+		margin: 0 0 55px;
+		display: block;
+		justify-content: center;
+	}
+
+	.article-information p, b {
+		color: #f4eee0;
+		margin: -2px 0;
+	}
+
 	.video-article {
 		max-width: 100%;
-		height: auto;
+		max-height: 100%;
 		text-align: center;
 	}
 
 	.media-article-content p {
 		color: #aaa7a1;
+	}
+	.image-article {
+		max-width: 100%;
 	}
 
 	section, article {
@@ -1598,6 +1628,7 @@ input, select, textarea {
 		.box .image.featured {
 			position: relative;
 			width: auto;
+			height: fit-content;
 			left: 1.75em;
 			top: 1.75em;
 			margin: -4.5em 0 4.25em -3.5em;
@@ -1611,7 +1642,7 @@ input, select, textarea {
 		.box.post h2 {
 			font-size: 2.5em;
 			/* letter-spacing: -0.015em; */
-			line-height: 60px;
+			line-height: 52px;
 		}
 
 		.box.post header > p {
@@ -2378,6 +2409,7 @@ input, select, textarea {
 
 		#footer header {
 			margin: 0 0 3em 0;
+			line-height: 45px;
 		}
 
 			#footer header h2 {
@@ -2797,6 +2829,10 @@ input, select, textarea {
 				}
 
 		/* Section/Article */
+
+			.article-information {
+				margin: 0 0 30px;
+			}
 
 			section, article {
 				margin-bottom: 20px;

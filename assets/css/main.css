@@ -1531,6 +1531,20 @@ input, select, textarea {
 
 /* Section/Article */
 
+	.center-article-content {
+		text-align: center;
+	}
+
+	.video-article {
+		max-width: 100%;
+		height: auto;
+		text-align: center;
+	}
+
+	.media-article-content p {
+		color: #aaa7a1;
+	}
+
 	section, article {
 		margin-bottom: 2.5em;
 	}
@@ -1573,16 +1587,12 @@ input, select, textarea {
 
 /* Box */
 
-	.box-post-size {
-		/* margin: 0 200px 0 200px; */
-		/* max-width: 680px; */
-		min-width: 100px;
-	}
-
 	.box {
 		background: #1e191a;
 		border-bottom: solid 1px #950740;
 		padding: 2.75em 1.75em 2.75em 1.75em;
+		margin: 0 auto;
+		max-width: 680px;
 	}
 
 		.box .image.featured {
@@ -1600,7 +1610,8 @@ input, select, textarea {
 
 		.box.post h2 {
 			font-size: 2.5em;
-			letter-spacing: -0.015em;
+			/* letter-spacing: -0.015em; */
+			line-height: 60px;
 		}
 
 		.box.post header > p {
@@ -1659,7 +1670,7 @@ input, select, textarea {
 		input[type="reset"].alt,
 		button.alt,
 		.button.alt {
-			background: #252122;
+			background: #333136;
 		}
 
 			input[type="button"].alt:hover,
@@ -1667,7 +1678,7 @@ input, select, textarea {
 			input[type="reset"].alt:hover,
 			button.alt:hover,
 			.button.alt:hover {
-				background: #353132;
+				background: #494445;
 			}
 
 			input[type="button"].alt:active,
@@ -1762,6 +1773,7 @@ input, select, textarea {
 			display: inline-block;
 			margin-left: 1em;
 			padding-left: 0;
+			margin-bottom: 20px;
 		}
 
 			ul.actions li:first-child {
@@ -2195,7 +2207,7 @@ input, select, textarea {
 	}
 
 		#banner header {
-			background-color: rgba(34, 30, 31, 0.98);
+			background-color: rgba(34, 30, 31, 0.301);
 			display: inline-block;
 			padding: 2.5em 5em;
 			border-radius: 5px;

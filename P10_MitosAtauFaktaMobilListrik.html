@@ -10,7 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai-sublime.min.css">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/monokai.min.css">
 		<link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
@@ -132,12 +132,40 @@
 										</a>
 										<p>Diagram of the dialogue system tool</p>
 									</section>
-									<p>As you can see the GameManager, UIManager, and InputManager use the Singleton class as an implementation of the Singleton pattern to create their instances. So, whenever other classes need to communicate with them, they just need to use the Singleton instance. This makes things super easy because you can access them with just one line of code, without having to pass their references.</p>
-									<p>for example this is how to access the GameManager instance using singleton class:</p>
+									<p>As you can see the GameManager, UIManager, and InputManager use the Singleton class as an implementation of the Singleton pattern to create their instances. So, whenever other classes need to communicate with them, they just need to use the Singleton instance. This makes things super easy because you can access them with just one line of code, without having to pass their references. For example this is how to access the GameManager instance using singleton class:</p>
 									<section class="media-article-content">
 										<pre><code class="language-csharp">GameManager.Instance.ResumeTimeline();</code></pre>
 										<p>example code to access GameManager Instance</p>
 									</section>
+									<p>Let's see the breakdown of each step of the pause process:</p>
+									<ol>
+										<li><p>The <b>DialogueBehaviour</b> asks the <b>DialogueClip</b> if there are any changes on the clip.</p></li>
+										<p>First the DialogueBehaviour detects if there are any changes on the played DialogueClip by assigning DialogueBehaviour as the behaviour of the DialogueClip, you can see it in this code</p>
+										<section class="media-article-content">
+											<pre><code class="language-csharp">public DialogueBehaviour template = new DialogueBehaviour ();</code></pre>
+											<p>The DialogueClip creates an instance of the DialogueBehaviour class and assigns it to the 'template' variable.</p>
+										</section>
+										<section class="media-article-content">
+											<pre><code class="language-csharp">public override Playable CreatePlayable (PlayableGraph graph, GameObject owner)
+    {
+        var playable = ScriptPlayable&lt;DialogueBehaviour&gt;.Create (graph, template);
+        return playable;
+    }</code></pre>
+											<p>example code to access GameManager Instance</p>
+										</section>
+										<li>The <b>DialogueClip</b> asks the <b>DialogueTrack</b> if there are any updates.</li>
+										<li>The <b>DialogueTrack</b> gives an update to the <b>DialogueClip</b> that there haven't been any changes made on this dialogue track.</li>
+										<li>The <b>DialogueClip</b> gives an update to the <b>DialogueBehaviour</b> that there is a change for this clip. The characterName is set to "Tosa," hasPause boolean is enabled, and the dialogueLine has the text "Test" and a dialogueFontSize of 30.</li>
+										<li>The <b>DialogueBehaviour</b> gives an update to the <b>GameManager</b> to execute <b>PauseTimeline()</b>, and also gives an update to the <b>UIManager</b> to change the characterName, dialogueLine, and dialogueFontSize through the <b>SetDialogue()</b> method.</li>
+										<li>The <b>UIManager</b> reads the update from the <b>DialogueBehaviour</b> and executes the <b>SetDialogue()</b> method.</li>
+										<li>The <b>GameManager</b> reads the update from the <b>DialogueBehaviour</b> and executes the <b>PauseTimeline()</b> method.</li>
+										<li>The <b>GameManager</b> gives an update to the <b>InputManager</b> that the game is now in dialogue mode.</li>
+										<li>The <b>InputManager</b> reads the update from the <b>GameManager</b>.</li>
+										<li>The <b>GameManager</b> gives an update to the <b>UIManager</b> to add an <b>onClick</b> event for the <b>nextSentenceButton</b> and the <b>GameManager</b>'s <b>ResumeTimeline()</b> method.</li>
+										<li>The <b>UIManager</b> reads the update from the <b>InputManager</b> and proceeds to add <b>onClick.AddListener</b> on the buttons.</li>
+										<li>The <b>UIManager</b> gives an update to the <b>GameManager</b> to add the <b>ResumeTimeline()</b> method to the <b>onClick</b> event.</li>
+										<li>The <b>GameManager</b> reads the update from the <b>UIManager</b> and then adds <b>ResumeTimeline()</b> to the <b>onClick</b> event.</li>
+									</ol>
 									<p>Now that you've seen the pause process, let's take a look at how the dialogue resumes.</p>
 									<section class="media-article-content">
 										<a href="gifs/P10_DialogueSystem_ProcessOfResumingTheDialogue.png" class="without-caption image-link">

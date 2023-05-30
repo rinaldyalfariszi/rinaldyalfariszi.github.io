@@ -29,6 +29,112 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+pre, code {
+	text-align: left;
+	font-size: 95%;
+}
+
+/* for block of numbers */
+.hljs-ln td.hljs-ln-numbers {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    text-align: center;
+    color: #ccc;
+    border-right: 1px solid #CCC;
+	border-bottom: 1px solid #cccccc00;
+    vertical-align: top;
+    padding-right: 5px;
+
+    /* your custom style here */
+} 
+
+/* for block of code */
+.hljs-ln td.hljs-ln-code {
+    padding-left: 10px;
+	border-bottom: 1px solid #cccccc00;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+::-webkit-scrollbar-track {
+	background: none;
+}
+::-webkit-scrollbar-thumb {
+	/* background: linear-gradient(#1d1d1d, #444444); */
+	background: #363636;
+	border-radius: 10px;
+}
+/* Magnified Popup */
+.image-link {
+    cursor: -webkit-zoom-in;
+    cursor: -moz-zoom-in;
+    cursor: zoom-in;
+  }
+  
+  /* This block of CSS adds opacity transition to background */
+  .mfp-with-zoom .mfp-container,
+  .mfp-with-zoom.mfp-bg {
+      opacity: 0;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transition: all 0.3s ease-out; 
+      -moz-transition: all 0.3s ease-out; 
+      -o-transition: all 0.3s ease-out; 
+      transition: all 0.3s ease-out;
+  }
+  
+  .mfp-with-zoom.mfp-ready .mfp-container {
+          opacity: 1;
+  }
+  .mfp-with-zoom.mfp-ready.mfp-bg {
+          opacity: 0.8;
+  }
+  
+  .mfp-with-zoom.mfp-removing .mfp-container, 
+  .mfp-with-zoom.mfp-removing.mfp-bg {
+      opacity: 0;
+  }
+  
+  
+  
+  /* padding-bottom and top for image */
+  .mfp-no-margins img.mfp-img {
+      padding: 0;
+  }
+  /* position of shadow behind the image */
+  .mfp-no-margins .mfp-figure:after {
+      top: 0;
+      bottom: 0;
+  }
+  /* padding for main container */
+  .mfp-no-margins .mfp-container {
+      padding: 0;
+  }
+  
+  
+  
+  /* aligns caption to center */
+  .mfp-title {
+    text-align: center;
+   
+  }
+  .image-source-link {
+    color: #DDD;
+  }
+  
+  
+  body { -webkit-backface-visibility: hidden; backface-visibility: hidden; 
+    font-family: "Calibri", "Trebuchet MS", "Helvetica", sans-serif;
+  }
+/* Magnified Popup */
+
 body {
 	line-height: 1;
 }
@@ -76,6 +182,7 @@ input, select, textarea {
 
 	html {
 		box-sizing: border-box;
+		scroll-behavior: smooth;
 	}
 
 	*, *:before, *:after {
@@ -1535,6 +1642,10 @@ input, select, textarea {
 		text-align: center;
 	}
 
+	.fa-exclamation-triangle {
+		color: #f8c008;
+	}
+
 	.article-header-image {
 		position: absolute;
 		top: 50%;
@@ -1571,6 +1682,11 @@ input, select, textarea {
 	.media-article-content p {
 		color: #aaa7a1;
 	}
+
+	.media-article-content {
+		text-align: center;
+	}
+
 	.image-article {
 		max-width: 100%;
 	}
@@ -2829,6 +2945,11 @@ input, select, textarea {
 
 			h2, h3, h4, h5, h6 {
 				font-size: 1.25em;
+			}
+
+			pre, code {
+				text-align: left;
+				font-size: 90%;
 			}
 
 		/* Button */

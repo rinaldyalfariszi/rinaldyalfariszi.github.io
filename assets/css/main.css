@@ -31,7 +31,9 @@ footer, header, hgroup, menu, nav, section {
 
 pre, code {
 	text-align: left;
-	font-size: 95%;
+	font-size: 88%;
+	font-family: Consolas, Monaco, monospace;
+	tab-size: 4;
 }
 
 /* for block of numbers */

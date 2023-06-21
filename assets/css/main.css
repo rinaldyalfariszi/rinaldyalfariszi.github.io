@@ -1648,6 +1648,10 @@ input, select, textarea {
 		color: #f8c008;
 	}
 
+	.fa-star {
+		color: #f8c008;
+	}
+
 	.article-header-image {
 		position: absolute;
 		top: 50%;

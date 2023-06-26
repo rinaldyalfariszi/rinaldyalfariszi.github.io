@@ -10,6 +10,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -63,13 +66,19 @@
 							<header>
 								<div class="banner-row">
 									<div class="banner-column">
-										<img id="banner-image1" src="gifs/P8_Preview1_Game_Dyslexia_ViralsPlay-CountMe_Cropped.gif" alt="Virals Play - Count Me" style="width:100%" draggable="false">
+										<a href="gifs/P8_Preview1_Game_Dyslexia_ViralsPlay-CountMe_Cropped.gif" class="without-caption image-link" draggable="false">
+											<img id="banner-image1" src="gifs/P8_Preview1_Game_Dyslexia_ViralsPlay-CountMe_Cropped.gif" alt="Virals Play - Count Me" style="width:100%" draggable="false">
+										</a>
 									</div>
 									<div class="banner-column">
-										<img id="banner-image2" src="gifs/P2_Preview1_Game_CubethonOnline.gif" alt="Cubethon Online" style="width:100%" draggable="false">
+										<a href="gifs/P2_Preview1_Game_CubethonOnline.gif" class="without-caption image-link" draggable="false">
+											<img id="banner-image2" src="gifs/P2_Preview1_Game_CubethonOnline.gif" alt="Cubethon Online" style="width:100%" draggable="false">
+										</a>
 									</div>
 									<div class="banner-column">
-										<img id="banner-image3" src="gifs/P5_Preview1_Game_HarfishVR.gif" alt="Harfish VR" style="width:100%" draggable="false">
+										<a href="gifs/P5_Preview1_Game_HarfishVR_Cropped.gif" class="without-caption image-link" draggable="false">
+											<img id="banner-image3" src="gifs/P5_Preview1_Game_HarfishVR_Cropped.gif" alt="Harfish VR" style="width:100%" draggable="false">
+										</a>
 									</div>
 								</div>
 								<h2>Welcome to my game portfolio website!</h2>
@@ -84,7 +93,9 @@
 							<div class="intro-text-container">
 								<h2>All right then! First, let me introduce myself</h2>
 								<h2>Who am I?</h3>
-								<img src="gifs/Pas Foto - Muhammad Rinaldy Alfariszi.png" height="200" alt="" />
+								<a href="gifs/Pas Foto - Muhammad Rinaldy Alfariszi.png" class="without-caption image-link">
+									<img class="image-article" src="gifs/Pas Foto - Muhammad Rinaldy Alfariszi.png" height="200" title="Hello!"/>
+								</a>
 								<p>My name is <strong>Muhammad Rinaldy Alfariszi</strong>, but you can call me <b>Rey</b>. I am a Unity game developer and a final year student majoring in Multimedia Engineering Technology at Telkom University. I have a strong work ethic, work well as part of a team, and always strive for high-quality results in my work. Moreover, I have a strong curiosity and constantly seek to expand my knowledge and skills in all related areas.</p>
 								<h2>Why do I find game development interesting?</h2>
 								<p>Well, I can say that it's my childhood dream job. When I played GTA, Minecraft, and Harvest Moon, I couldn't help but wonder about the incredible process behind creating these fun experiences. However, back then, I didn't have any knowledge about programming, math, or even the game design at all. When I went to college, I acquired the skills necessary to become a good game developer. I mean, everyone has to start from somewhere, right ^^</p>
@@ -202,10 +213,8 @@
 										<div class="row">
 											<div class="col-4 col-6-medium col-12-small">
 												<section class="box">
-													<a href="#" class="image featured"><img src="gifs/P10_Preview1_Game_Mitos Atau Fakta Mobil Listrik.gif" alt="" />
-														<!-- <div class="article-header-image">
-															<img src="gifs/P3_Preview1_Game_ColorDash.gif"/>
-														</div> -->
+													<a href="gifs/P10_Preview1_Game_Mitos Atau Fakta Mobil Listrik.gif" class="without-caption image-link" draggable="false">
+														<div class="image featured"><img src="gifs/P10_Preview1_Game_Mitos Atau Fakta Mobil Listrik.gif" alt="" draggable="false"/></div>
 													</a>
 													<div class="article-date-section">
 														<p><strong>Year 2023 | Freelance</strong></p>
@@ -228,10 +237,8 @@
 											</div>
 											<div class="col-4 col-6-medium col-12-small">
 												<section class="box">
-													<a href="#" class="image featured"><img src="gifs/P9_Preview1_Game_EyeTracking_MathQuiz.gif" alt="" />
-														<!-- <div class="article-header-image">
-															<img src="gifs/P9_Preview1_Game_EyeTracking_MathQuiz.gif"/>
-														</div> -->
+													<a href="gifs/P9_Preview1_Game_EyeTracking_MathQuiz.gif" class="without-caption image-link" draggable="false">
+														<div class="image featured"><img src="gifs/P9_Preview1_Game_EyeTracking_MathQuiz.gif" alt="" draggable="false"/></div>
 													</a>
 													<div class="article-date-section">
 														<p><strong>Year 2022 | Metalabs Telkom University</strong></p>
@@ -239,7 +246,7 @@
 													<header>
 														<h3>Project Eye Tracking Game <strong>Math Quiz</strong></h3>
 													</header>
-													<p>A quiz game that tracks the player's eye position on the screen to analyze eye movement by gathering telemetry data and converting it into a spreadsheet.</p>
+													<p>A quiz game that tracks the player's eye position on the screen to analyze eye movement by gathering telemetry data and converting it into a comma-separated values text file (.csv) that can be opened as a spreadsheet.</p>
 													<footer>
 														<div class="article-information">
 															<p><i><b>Status : </b> Finished</i></p>
@@ -247,17 +254,15 @@
 															<p><i><b>Technology : </b> Tobii Eye Tracker 5, Unity Game Engine, Blender 3D</i></p>
 														</div>
 														<ul class="actions">
-															<li><a href="PageUnderConstruction.html" class="button alt">Find out more</a></li>
+															<li><a href="P9_ProjectEyeTrackingGameMathQuiz.html" class="button alt">Find out more</a></li>
 														</ul>
 													</footer>
 												</section>
 											</div>
 											<div class="col-4 col-6-medium col-12-small">
 												<section class="box">
-													<a href="P8_Virals-Play-Count-Me.html" class="image featured"><img src="gifs/P8_Preview1_Game_Dyslexia_ViralsPlay-CountMe_Cropped.gif" alt="" />
-														<!-- <div class="article-header-image">
-															<img src="gifs/P8_Preview1_Game_Dyslexia_ViralsPlay-CountMe.gif"/>
-														</div> -->
+													<a href="gifs/P8_Preview1_Game_Dyslexia_ViralsPlay-CountMe_Cropped.gif" class="without-caption image-link" draggable="false">
+														<div class="image featured"><img src="gifs/P8_Preview1_Game_Dyslexia_ViralsPlay-CountMe_Cropped.gif" alt="" draggable="false"/></div>
 													</a>
 													<div class="article-date-section">
 														<p><strong>Year 2022 | Metalabs Telkom University</strong></p>
@@ -280,10 +285,8 @@
 											</div>
 											<div class="col-4 col-6-medium col-12-small">
 												<section class="box">
-													<a href="#" class="image featured"><img src="gifs/P7_Preview1_Application_HestiaProductLaunchLeapmotionApplication.gif" alt="" />
-													<!-- <div class="article-header-image">
-															<img src="gifs/P7_Preview1_3_Application_HestiaProductLaunchLeapmotionApplication.gif"/>
-														</div> -->
+													<a href="gifs/P7_Preview1_Application_HestiaProductLaunchLeapmotionApplication.gif" class="without-caption image-link" draggable="false">
+														<div class="image featured"><img src="gifs/P7_Preview1_Application_HestiaProductLaunchLeapmotionApplication.gif" alt="" draggable="false"/></div>
 													</a>
 													<div class="article-date-section">
 														<p><strong>Year 2022 | Metalabs Telkom University</strong></p>
@@ -306,10 +309,8 @@
 											</div>
 											<div class="col-4 col-6-medium col-12-small">
 												<section class="box">
-													<a href="#" class="image featured"><img src="gifs/P6_Preview1_Game_DoggoThePet.gif" alt="" />
-													<!-- <div class="article-header-image">
-															<img src="gifs/P2_Preview1_Game_CubethonOnline.gif"/>
-														</div> -->
+													<a href="gifs/P6_Preview1_Game_DoggoThePet.gif" class="without-caption image-link" draggable="false">
+														<div class="image featured"><img src="gifs/P6_Preview1_Game_DoggoThePet.gif" alt="" draggable="false"/></div>
 													</a>
 													<div class="article-date-section">
 														<p><strong>Year 2022 | Metalabs Telkom University</strong></p>
@@ -332,10 +333,8 @@
 											</div>
 											<div class="col-4 col-6-medium col-12-small">
 												<section class="box">
-													<a href="#" class="image featured"><img src="gifs/P5_Preview1_Game_HarfishVR.gif" alt="" />
-													<!-- <div class="article-header-image">
-															<img src="gifs/P5_Preview1_Game_HarfishVR.gif"/>
-														</div> -->
+													<a href="gifs/P5_Preview1_Game_HarfishVR_Cropped.gif" class="without-caption image-link" draggable="false">
+														<div class="image featured"><img src="gifs/P5_Preview1_Game_HarfishVR_Cropped.gif" alt="" draggable="false"/></div>
 													</a>
 													<div class="article-date-section">
 														<p><strong>Year 2022 | Telkom Indonesia</strong></p>
@@ -358,7 +357,9 @@
 											</div>
 											<div class="col-4 col-6-medium col-12-small">
 												<section class="box">
-													<a href="#" class="image featured"><img src="gifs/P4_Preview1_Game_BudiDayaVisualNovelWithAR.gif" alt="" />
+													<a href="gifs/P4_Preview1_Game_BudiDayaVisualNovelWithAR.gif" class="without-caption image-link" draggable="false">
+														<div class="image featured"><img src="gifs/P4_Preview1_Game_BudiDayaVisualNovelWithAR.gif" alt="" draggable="false"/></div>
+													</a>
 													<!-- <div class="article-header-image">
 															<img src="gifs/P4_Preview3_Game_BudiDayaVisualNovelWithAR.gif"/>
 														</div> -->
@@ -384,10 +385,8 @@
 											</div>
 											<div class="col-4 col-6-medium col-12-small">
 												<section class="box">
-													<a href="#" class="image featured"><img src="gifs/P3_Preview1_Game_ColorDash.gif" alt="" />
-													<!-- <div class="article-header-image">
-															<img src="gifs/P3_Preview1_Game_ColorDash.gif"/>
-														</div> -->
+													<a href="gifs/P3_Preview1_Game_ColorDash.gif" class="without-caption image-link" draggable="false">
+														<div class="image featured"><img src="gifs/P3_Preview1_Game_ColorDash.gif" alt="" draggable="false"/></div>
 													</a>
 													<div class="article-date-section">
 														<p><strong>Year 2021 | College Project</strong></p>
@@ -410,10 +409,8 @@
 											</div>
 											<div class="col-4 col-6-medium col-12-small">
 												<section class="box">
-													<a href="#" class="image featured"><img src="gifs/P2_Preview1_Game_CubethonOnline.gif" alt="" />
-													<!-- <div class="article-header-image">
-															<img src="gifs/P2_Preview1_Game_CubethonOnline.gif"/>
-														</div> -->
+													<a href="gifs/P2_Preview1_Game_CubethonOnline.gif" class="without-caption image-link" draggable="false">
+														<div class="image featured"><img src="gifs/P2_Preview1_Game_CubethonOnline.gif" alt="" draggable="false"/></div>
 													</a>
 													<div class="article-date-section">
 														<p><strong>Year 2021 | College Project</strong></p>
@@ -436,10 +433,8 @@
 											</div>
 											<div class="col-4 col-6-medium col-12-small">
 												<section class="box">
-													<a href="#" class="image featured"><img src="gifs/P1_Preview1_Game_CowboyRush.gif" alt="" />
-													<!-- <div class="article-header-image">
-															<img src="gifs/P1_Preview1_Game_CowboyRush.gif"/>
-														</div> -->
+													<a href="gifs/P1_Preview1_Game_CowboyRush.gif" class="without-caption image-link" draggable="false">
+														<div class="image featured"><img src="gifs/P1_Preview1_Game_CowboyRush.gif" alt="" draggable="false"/></div>
 													</a>
 													<div class="article-date-section">
 														<p><strong>Year 2021 | College Project</strong></p>
@@ -474,7 +469,9 @@
 										<div class="row">
 											<div class="col-6 col-12-small">
 												<section class="box">
-													<a href="#" class="image featured"><img src="gifs/P10_DialogueSystemDemo/P10_PreviewDemo11_Game_Mitos Atau Fakta Mobil Listrik.gif" alt="" /></a>
+													<a href="gifs/P10_DialogueSystemDemo/P10_PreviewDemo11_Game_Mitos Atau Fakta Mobil Listrik.gif" class="without-caption image-link" draggable="false">
+														<div class="image featured"><img src="gifs/P10_DialogueSystemDemo/P10_PreviewDemo11_Game_Mitos Atau Fakta Mobil Listrik.gif" alt="" draggable="false"/></div>
+													</a>
 													<header>
 														<p><strong>Project Mobile Game Mitos atau Fakta Mobil Listrik</strong></p>
 														<h3>Interactive dialogue tool with custom Unity Timeline Clip</h3>
@@ -489,7 +486,9 @@
 											</div>
 											<div class="col-6 col-12-small">
 												<section class="box">
-													<a href="#" class="image featured"><img src="gifs/P10_Screenshot5_Game_MitosAtauFaktaMobilListrik.png" alt="" /></a>
+													<a href="gifs/P10_Screenshot5_Game_MitosAtauFaktaMobilListrik.png" class="without-caption image-link" draggable="false">
+														<div class="image featured"><img src="gifs/P10_Screenshot5_Game_MitosAtauFaktaMobilListrik.png" alt="" draggable="false"/></div>
+													</a>
 													<header>
 														<p><strong>Project Mobile Game Mitos atau Fakta Mobil Listrik</strong></p>
 														<h3>Game optimization using various Unity Game Optimization Techniques</h3>
@@ -743,12 +742,45 @@
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
+			<!-- <script src="assets/js/jquery.min.js"></script> -->
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+
+				$('.without-caption').magnificPopup({
+				type: 'image',
+				closeOnContentClick: true,
+				closeBtnInside: false,
+				mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+				image: {
+					verticalFit: true
+				},
+				zoom: {
+					enabled: true,
+					duration: 300 // don't foget to change the duration also in CSS
+				}
+				});
+
+				$('.with-caption').magnificPopup({
+					type: 'image',
+					closeOnContentClick: true,
+					closeBtnInside: false,
+					mainClass: 'mfp-with-zoom mfp-img-mobile',
+					image: {
+						verticalFit: true,
+						titleSrc: function(item) {
+							return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+						}
+					},
+					zoom: {
+						enabled: true
+					}
+				});
+			</script>
 
 	</body>
 </html>

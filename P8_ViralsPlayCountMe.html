@@ -10,6 +10,10 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+		<link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 	</head>
 	<body class="no-sidebar is-preload">
 		<div id="page-wrapper">
@@ -50,7 +54,9 @@
 					<div class="container">
 						<!-- Content -->
 							<article class="box post" style="text-align: justify;">
-								<a href="#" class="image featured"><img src="gifs/P8_Preview1_Game_Dyslexia_ViralsPlay-CountMe.gif" alt="" /></a>
+								<a href="gifs/P8_Preview1_Game_Dyslexia_ViralsPlay-CountMe.gif" class="without-caption image-link">
+									<section class="image featured"><img src="gifs/P8_Preview1_Game_Dyslexia_ViralsPlay-CountMe.gif" alt="" /></section>
+								</a>
 								<div class="article-date-section">
 									<p><strong>Year 2022 | Metalabs Telkom University</strong></p>
 								</div>
@@ -82,11 +88,11 @@
 									<header>
 										<h3>Core Mechanics</h3>
 									</header>
-									<section class="center-article-content">
-										<section class="media-article-content">
-											<img class="image-article" src="gifs/P8_Preview1_Game_Dyslexia_ViralsPlay-CountMe.gif" alt="" />
-											<p>The gameplay of Virals Play - Count Me</p>
-										</section>
+									<section class="media-article-content">
+										<a href="gifs/P8_Preview1_Game_Dyslexia_ViralsPlay-CountMe.gif" class="without-caption image-link">
+											<img class="image-article" src="gifs/P8_Preview1_Game_Dyslexia_ViralsPlay-CountMe.gif" alt=""/>
+										</a>
+										<p>The gameplay of Virals Play - Count Me</p>
 									</section>
 									<p>
 										In this game, the main goal is to move the ball into the bowl and match the number of balls with the given set of numbers. For example, if the number displayed is 3, you should put 3 balls into the blue bowl. If you put 8 balls instead, it may indicate a strong possibility of dyslexia. Similarly, if the number 8 is displayed and you put 3 balls in it, it may also suggest a strong possibility of dyslexia. However, if you don't match either 8 or 3, then there's no problem.
@@ -96,13 +102,17 @@
 									<header>
 										<h3>What have I worked on?</h3>
 									</header>
-									<section class="center-article-content">
-										<section class="media-article-content">
-											<img class="image-article" src="gifs/P8_Preview2_Game_Dyslexia_ViralsPlay-CountMe.gif" alt="" />
-											<p>Testing the gameplay of Virals Play - Count Me in Unity Editor</p>
-											<img class="image-article" src="gifs/P8_ScreenShot1_Game_Dyslexia_ViralsPlay-CountMe.png" alt="" />
-											<p>The screenshot in Unity Editor</p>
-										</section>
+									<section class="media-article-content">
+										<a href="gifs/P8_Preview2_Game_Dyslexia_ViralsPlay-CountMe.gif" class="without-caption image-link">
+											<img class="image-article" src="gifs/P8_Preview2_Game_Dyslexia_ViralsPlay-CountMe.gif" alt=""/>
+										</a>
+										<p>Testing the gameplay of Virals Play - Count Me in Unity Editor</p>
+									</section>
+									<section class="media-article-content">
+										<a href="gifs/P8_ScreenShot1_Game_Dyslexia_ViralsPlay-CountMe.png" class="without-caption image-link">
+											<img class="image-article" src="gifs/P8_ScreenShot1_Game_Dyslexia_ViralsPlay-CountMe.png" alt=""/>
+										</a>
+										<p>The screenshot in Unity Editor</p>
 									</section>
 									<ul>
 										<li><p>Implemented a game mechanic that dynamically displays pairs of numbers as game objectives by using List.</p></li>
@@ -274,12 +284,48 @@
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
+			<!-- <script src="assets/js/jquery.min.js"></script> -->
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+			<script>
+				hljs.highlightAll();
+				hljs.initLineNumbersOnLoad();
+			</script>
+			<script>
+
+				$('.without-caption').magnificPopup({
+				type: 'image',
+				closeOnContentClick: true,
+				closeBtnInside: false,
+				mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+				image: {
+					verticalFit: true
+				},
+				zoom: {
+					enabled: true,
+					duration: 300 // don't foget to change the duration also in CSS
+				}
+				});
+
+				$('.with-caption').magnificPopup({
+					type: 'image',
+					closeOnContentClick: true,
+					closeBtnInside: false,
+					mainClass: 'mfp-with-zoom mfp-img-mobile',
+					image: {
+						verticalFit: true,
+						titleSrc: function(item) {
+							return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+						}
+					},
+					zoom: {
+						enabled: true
+					}
+				});
+			</script>
 	</body>
 </html>

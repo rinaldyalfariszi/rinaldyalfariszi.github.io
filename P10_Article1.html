@@ -1,0 +1,396 @@
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Interactive dialogue tool with custom Unity Timeline Clip</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+		<link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header">
+
+					<!-- Logo -->
+						<h1><a href="index.html">MUHAMMAD RINALDY ALFARISZI</a></h1>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li class="current">
+									<a href="#">Game Portfolio</a>
+									<ul>
+										<li><a href="#">Project Mobile Game Mitos atau Fakta Mobil Listrik</a></li>
+										<li><a href="#">Project Eye Tracking Game Math Quiz</a></li>
+										<li><a href="#">Project Hand Tracking Game Virals Play - Count Me</a></li>
+										<li><a href="#">Project Hand Tracking Application Hestia Product Launch Leapmotion Application</a></li>
+										<li><a href="#">Project Hand Tracking Game Pet Game Demo</a></li>
+										<li><a href="#">Project VR Oculus Quest 2 Game Harfish VR</a></li>
+										<li><a href="#">Project Mobile AR Game Budi Daya Visual Novel with AR</a></li>
+										<li><a href="#">Project Mobile VR Game Color Dash</a></li>
+										<li><a href="#">Project Mobile Game Cubethon Online</a></li>
+										<li><a href="#">Project Mobile Game Cowboy Rush</a></li>
+									</ul>
+								</li>
+								<li><a href="#footer">Contact Me</a></li>
+							</ul>
+						</nav>
+
+				</section>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+						<!-- Content -->
+							<article class="box post" style="text-align: justify;">						
+								<header>
+									<a href="gifs/P10_DialogueSystemDemo/P10_PreviewDemo11_Game_Mitos Atau Fakta Mobil Listrik.gif" class="without-caption image-link">
+										<section class="image featured"><img src="gifs/P10_DialogueSystemDemo/P10_PreviewDemo11_Game_Mitos Atau Fakta Mobil Listrik.gif" alt="" /></section>
+									</a>
+									<p><strong>Project Mobile Game Mitos atau Fakta Mobil Listrik</strong></p>
+									<h2>Interactive dialogue tool with custom Unity Timeline Clip</h2>
+								</header>
+								<section>
+									<header>
+										<h3>Introduction</h3>
+									</header>
+									<p><a class="fa fa-exclamation-triangle"></a> <i>Please keep in mind that these explanations is simply me sharing what I did to get the result. I believe there's room for improvement in the code and system, but currently, I don't have the skills and time to make those optimizations.</i></p>
+									<section class="media-article-content">
+										<a href="gifs/P10_Preview2_Game_Mitos Atau Fakta Mobil Listrik.gif" class="without-caption image-link">
+											<img class="image-article" src="gifs/P10_Preview2_Game_Mitos Atau Fakta Mobil Listrik.gif" alt="" />
+										</a>
+										<p>The Unity Timeline of the game</p>
+									</section>
+									<p>The Unity Timeline acts as a place that can contain different tracks, where each track can contain different clips (Just like Premiere Pro or any other timelines). As a developer, I wanted to optimize the game and make it more efficient, so I developed a tool for the dialogue system within the Unity Timeline.</p>
+									<p>The tool makes it a lot easier to manage, as it can provide more visibility and controls of the dialogue in the Timeline instead of dealing with a bunch of buttons and manually set the duration for each dialogue panel in the Inspector tab. I also considered our 3D artist on the team and made sure the tool is user-friendly for them.</p>
+									<section class="media-article-content">
+										<a href="gifs/P10_Preview3_Game_Mitos Atau Fakta Mobil Listrik.gif" class="without-caption image-link">
+											<img class="image-article" src="gifs/P10_Preview3_Game_Mitos Atau Fakta Mobil Listrik.gif" alt="" />
+										</a>
+										<p>Demo of the dialogue system tool</p>
+									</section>
+									<p>To create the dialogue system tool within Unity Timeline, I found a solution by editing the Timeline script. I began by researching how to achieve this functionality and came across a similar template in the Unity Timeline demo project.</p>
+									<p>After downloading the project to study it, I imported the script into my project and proceeded to make modifications by adding "Fakta" and "Mitos" buttons, as well as a finished button to achieve the result I want for the dialogue clip.</p>
+									<p>You can find the Unity Timeline project demo in the Unity's blog by visiting this link <a href="https://blog.unity.com/technology/creative-scripting-for-timeline" target="_blank" rel="noopener noreferrer">https://blog.unity.com/technology/creative-scripting-for-timeline</a>.</p>
+									<header>
+										<h3>The Process</h3>
+									</header>
+									<p>Now, let's dive deeper into the technical side. In total, there are 7 scripts, including the Singleton script, that contribute to achieving this result. But There are three important scripts that are essential for our Dialogue System within Unity Timeline, they are DialogueTrack (for the Track Asset), DialogueClip (for the Playable Asset), and DialogueBehaviour (for the Playable Behaviour). These scripts are crucial for managing and controlling the timeline-based interactions in our project.</p>
+									<p>Each of those 3 scripts has a specific role that works together in the following way:</p>
+									<section class="media-article-content">
+										<a href="gifs/P10_DialogueSystemDemo/P10_PreviewDemo1_Game_Mitos Atau Fakta Mobil Listrik.png" class="without-caption image-link">
+											<img class="image-article" src="gifs/P10_DialogueSystemDemo/P10_PreviewDemo1_Game_Mitos Atau Fakta Mobil Listrik.png" alt="" title="The anatomy of each 3 scripts"/>
+										</a>
+										<p>The anatomy of each 3 scripts</p>
+									</section>
+									<ul>
+										<li>Track Asset Script (Yellow): Controls creating track</li>
+										<li>Playable Asset Script (Blue): Creates clips on the track</li>
+										<li>Playable Behaviour Script (Red): The logic to tell Unity what to do when the playhead is on the clip</li>
+									</ul>
+									<p>And now, for the exciting part, let’s see how this dialogue system works by creating it from scratch.</p>
+									<ol>
+										<li>
+											<p><b>Creating the UI for the Dialogue</b></p>
+											<section class="media-article-content">
+												<a href="gifs/P10_DialogueSystemDemo/P10_PreviewDemo2_Game_Mitos Atau Fakta Mobil Listrik.png" class="without-caption image-link">
+													<img class="image-article" src="gifs/P10_DialogueSystemDemo/P10_PreviewDemo2_Game_Mitos Atau Fakta Mobil Listrik.png" alt="" title="The UI of the Dialogue"/>
+												</a>
+												<p>Creating the UI of the Dialogue</p>
+											</section>
+											The UI of the Dialogue consist of:
+											<ul>
+												<li><b>DialoguePanel</b>: An empty GameObject to act as a container for the Dialogue UI.</li>
+												<li><b>CharacterName</b>: A text for the character’s name</li>
+												<li><b>DialogueLine</b>: A text for the dialogue line</li>
+												<li><b>NextSentenceButton</b>: A button for continue to next dialogue</li>
+												<li><b>NextSentenceMessage</b>: A text for the NextSentenceButton</li>
+												<li><b>Fakta_Btn</b>: A button for choosing the Fact answer</li>
+												<li><b>Mitos_Btn</b>: A button for choosing the Myth answer</li>
+											</ul>
+										</li>
+										<li>
+											<p><b>Creating the Timeline</b></p>
+											<section class="media-article-content">
+												<a href="gifs/P10_DialogueSystemDemo/P10_PreviewDemo3_Game_Mitos Atau Fakta Mobil Listrik.gif" class="without-caption image-link">
+													<img class="image-article" src="gifs/P10_DialogueSystemDemo/P10_PreviewDemo3_Game_Mitos Atau Fakta Mobil Listrik.gif" alt="" title="Creating the Timeline"/>
+												</a>
+												<p>Creating the Timeline</p>
+											</section>
+											<p>Then we create a new <b>Empty GameObject</b> to act as our Timeline.</p>
+										</li>
+										<li>
+											<p><b>Creating the Dialogue Track</b></p>
+											<section class="media-article-content">
+												<a href="gifs/P10_DialogueSystemDemo/P10_PreviewDemo4_Game_Mitos Atau Fakta Mobil Listrik.gif" class="without-caption image-link">
+													<img class="image-article" src="gifs/P10_DialogueSystemDemo/P10_PreviewDemo4_Game_Mitos Atau Fakta Mobil Listrik.gif" alt="" title="Creating the Timeline"/>
+												</a>
+												<p>Creating the Dialogue Track</p>
+											</section>
+											<p>To add a <b>Dialogue Track</b>, simply right-click on the left side of the Timeline. You'll notice a custom <b>Dialogue Track</b> with the same name as the <b>DialogueTrack</b> class.</p>
+											<p><b>This is how it works:</b></p>
+											<p>The <b>Dialogue Track</b> serves as a container for multiple clips in Unity Timeline. To create a custom track asset, we'll need to create <b>DialogueTrack</b> class like this script below.</p>
+											<section class="media-article-content">
+												<a href="gifs/P10_DialogueSystemDemo/P10_PreviewDemo5_Game_Mitos Atau Fakta Mobil Listrik.png" class="without-caption image-link">
+													<img class="image-article" src="gifs/P10_DialogueSystemDemo/P10_PreviewDemo5_Game_Mitos Atau Fakta Mobil Listrik.png" alt="" title="Creating the Timeline"/>
+												</a>
+												<p>The code of DialogueTrack script</p>
+											</section>
+											<section class="media-article-content">
+												<pre><code class="language-csharp">using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.Timeline;
+
+[TrackColor(0.855f, 0.903f, 0.87f)]
+[TrackClipType(typeof(DialogueClip))]
+public class DialogueTrack : TrackAsset
+{
+
+}</code></pre>
+												<p>The code of DialogueTrack script</p>
+											</section>
+											<p>Now, we have a custom <b>Dialogue Track</b>. In the script, we can see the <b>TrackColor</b> and <b>TrackClipType</b> attributes. This means that the <b>Dialogue Track</b> has a white color and uses the <b>DialogueClip</b> class for its clips. The <b>DialogueTrack</b> class is derived from the <b>TrackAsset</b> class, which is the base class used in Unity's Timeline.</p>
+										</li>
+										<li>
+											<p><b>Creating the Dialogue Clip</b></p>
+											<p>After successfully creating the <b>Dialogue Track</b>, the next step is to make the <b>Dialogue Clip</b> that can be played on that track.</p>
+											<section class="media-article-content">
+												<a href="gifs/P10_DialogueSystemDemo/P10_PreviewDemo6_Game_Mitos Atau Fakta Mobil Listrik.gif" class="without-caption image-link">
+													<img class="image-article" src="gifs/P10_DialogueSystemDemo/P10_PreviewDemo6_Game_Mitos Atau Fakta Mobil Listrik.gif" alt="" title="Creating the Timeline"/>
+												</a>
+												<p>Creating the Dialogue Clip</p>
+											</section>
+											<p>To create the <b>Dialogue Clip</b>, right-click in the empty space on the right side of the Timeline. Then, click on <b>'Add Dialogue Clip'</b> in the highlighted area. The <b>Dialogue Clip</b> will be named after the <b>DialogueClip</b> class.</p>
+											<p>You may notice that when we create our first <b>Dialogue Clip</b>, a <b>UIManager GameObject</b> appears in the Hierarchy window. This <b>GameObject</b> represents a <b>Singleton instance</b> of <b>UIManager</b>. Now, let's take a closer look at how it works.</p>
+											<p><b>This is how it works:</b></p>
+											<p>First, before we jump into analyzing the code, let's understand the basic concept of <b>Unity Timeline Playables</b>. <b>Playables</b> are the most important part when creating assets for Timeline. So, what exactly is a <b>Playable</b>?</p>
+											<p><b>Unity Timeline Playables</b> are specialized assets within the Unity engine that enable the creation and control of dynamic elements, such as animations, audio, or custom gameplay logic, within a Timeline. They make it easy to organize and coordinate events during playback, making Unity projects more interactive and engaging.</p>
+											<section class="media-article-content">
+												<a href="gifs/P10_DialogueSystemDemo/P10_PreviewDemo7_Game_Mitos Atau Fakta Mobil Listrik.png" class="without-caption image-link">
+													<img class="image-article" src="gifs/P10_DialogueSystemDemo/P10_PreviewDemo7_Game_Mitos Atau Fakta Mobil Listrik.png" alt="" title="Creating the Timeline"/>
+												</a>
+												<p>The Timeline Playable Graph structure</p>
+											</section>
+											<p>As you can see in the <b>Playable Graph</b>, <b>Playables</b> refer to everything that can be played in <b>Unity Timeline</b>. If you want to see the types of <b>Playables</b>, these are the most common types of <b>Playables</b> and <b>Playable Outputs</b>.</p>
+											<section class="media-article-content">
+												<a href="gifs/P10_DialogueSystemDemo/P10_PreviewDemo8_Game_Mitos Atau Fakta Mobil Listrik.png" class="without-caption image-link">
+													<img class="image-article" src="gifs/P10_DialogueSystemDemo/P10_PreviewDemo8_Game_Mitos Atau Fakta Mobil Listrik.png" alt="" title="Creating the Timeline"/>
+												</a>
+												<p>Common types of Playables and Playables Output</p>
+											</section>
+											<p>Now let's take a look at the <b>Playable Graph</b> for our Timeline using the <b>PlayableGraph Visualizer</b> package. It provides a visual representation of how different <b>Playables</b> are connected and controlled, but we need to install it first.</p>
+											<section class="media-article-content">
+												<a href="gifs/P10_DialogueSystemDemo/P10_PreviewDemo9_Game_Mitos Atau Fakta Mobil Listrik.gif" class="without-caption image-link">
+													<img class="image-article" src="gifs/P10_DialogueSystemDemo/P10_PreviewDemo9_Game_Mitos Atau Fakta Mobil Listrik.gif" alt="" title="Creating the Timeline"/>
+												</a>
+												<p>PlayableGraph Visualizer package installation</p>
+											</section>
+											<section class="media-article-content">
+												<a href="gifs/P10_DialogueSystemDemo/P10_PreviewDemo10_Game_Mitos Atau Fakta Mobil Listrik.png" class="without-caption image-link">
+													<img class="image-article" src="gifs/P10_DialogueSystemDemo/P10_PreviewDemo10_Game_Mitos Atau Fakta Mobil Listrik.png" alt="" title="Creating the Timeline"/>
+												</a>
+												<p>PlayableGraph Visualizer window</p>
+											</section>
+											<p>Based on that <b>PlayableGraph</b>, we can see that the <b>PlayableGraph</b> is from <b>Demo-Story1.PlayableDirector</b>, the <b>PlayableOutput</b> is a <b>ScriptOutput</b>, and the <b>Playable</b> is a customized <b>ScriptPlayable&lt;&gt;</b> called <b>DialogueBehaviour</b>.</p>
+											<p>Next, let's take a look at how the <b>PlayableGraph</b> works in our Timeline.</p>
+											<section class="media-article-content">
+												<a href="gifs/P10_DialogueSystemDemo/P10_PreviewDemo11_Game_Mitos Atau Fakta Mobil Listrik.gif" class="without-caption image-link">
+													<img class="image-article" src="gifs/P10_DialogueSystemDemo/P10_PreviewDemo11_Game_Mitos Atau Fakta Mobil Listrik.gif" alt="" title="Creating the Timeline"/>
+												</a>
+												<p>Demonstration of the Playable Graph</p>
+											</section>
+											<p>When we play the <b>DialogueClip</b>, we can see that the <b>DialogueBehaviour</b> on the <b>PlayableGraph</b> is highlighted. Also, the <b>Edge Weight</b> on the graph line turns white (1), showing that the <b>Playable</b> is currently active.</p>
+											<p>If we observe more on the <b>Edge Weight</b>, it can be useful for blending between clips, for example like this.</p>
+											<section class="media-article-content">
+												<a href="gifs/P10_DialogueSystemDemo/P10_PreviewDemo12_Game_Mitos Atau Fakta Mobil Listrik.gif" class="without-caption image-link">
+													<img class="image-article" src="gifs/P10_DialogueSystemDemo/P10_PreviewDemo12_Game_Mitos Atau Fakta Mobil Listrik.gif" alt="" title="Creating the Timeline"/>
+												</a>
+												<p>Demonstration of the Edge Weight in Playable Graph</p>
+											</section>
+											<p>If you're wondering why the <b>DialogueBehaviour Playable</b> doesn't have a <b>mixer</b>, it's because we didn't implement any <b>mixer</b> in the script.</p>
+											<p>Now that we understand the basics of the <b>Playable</b>, let's dive into the code and see how the <b>DialogueClip</b> works.</p>
+											<section class="media-article-content">
+												<a href="gifs/P10_DialogueSystemDemo/P10_PreviewDemo13_Game_Mitos Atau Fakta Mobil Listrik.png" class="without-caption image-link">
+													<img class="image-article" src="gifs/P10_DialogueSystemDemo/P10_PreviewDemo13_Game_Mitos Atau Fakta Mobil Listrik.png" alt="" title="Creating the Timeline"/>
+												</a>
+												<p>The code of DialogueClip script</p>
+											</section>
+											<ul>
+												<li>
+													<p>For this script, we are going to use <b>UnityEngine.Playables</b> and <b>UnityEngine.Timeline</b> libraries to create our own custom clip. To make sure the <b>DialogueClip</b> class can be saved and serialized, we added the <b>Serializable</b> attribute to it.
+													<section class="media-article-content">
+														<pre><code class="language-csharp">using System;
+using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.Timeline;
+
+[Serializable]</code></pre>
+														<p>Code snippet to access the required namespaces and Serializable</p>
+													</section>
+													</p>
+												</li>
+												<li>
+													<p>Then, in the <b>DialogueClip</b> class, we use the <b>PlayableAsset</b> class and implement the <b>ITimelineClipAsset</b> interface class.
+													<section class="media-article-content">
+														<pre><code class="language-csharp">public class DialogueClip : PlayableAsset, ITimelineClipAsset</code></pre>
+														<p>Code snippet of DialogueClip class declaration</p>
+													</section>
+													</p>
+												</li>
+												<li>
+													<p>The <b>PlayableAsset</b> is a base class used to create new <b>Playable</b> assets. We use it to override the <b>CreatePlayable()</b> method later on.</p>
+												</li>
+												<li>
+													<p>The <b>ITimelineClipAsset</b> is an interface class that helps us add advanced features to <b>Timeline Clips</b>. In this case, we use it to implement the <b>ClipCaps</b> feature for our clip.</p>
+												</li>
+												<li>
+													<p>Now, we create an instance of the <b>DialogueBehaviour</b> class called <b>template</b> and set it as public. This allows us to create a behavior template for our clip, specifically the <b>DialogueBehaviour</b> class.
+													<section class="media-article-content">
+														<pre><code class="language-csharp">public DialogueBehaviour template = new DialogueBehaviour ();</code></pre>
+														<p>Code snippet to create an instance of the DialogueBehaviour</p>
+													</section>
+													</p>
+												</li>
+												<li>
+													<p>Next, this code is used to handle the <b>Clip Capabilities (ClipCaps)</b> for our clip. Since we don't want any advanced features in the <b>ClipCaps</b>, we set it to <b>none</b>.
+													<section class="media-article-content">
+														<pre><code class="language-csharp" data-ln-start-from="10">public ClipCaps clipCaps
+{
+get { return ClipCaps.None; }
+}</code></pre>
+														<p>Code snippet to handle the Clip Capabilities for dialogue clip.</p>
+													</section>
+													</p>
+												</li>
+												<li>
+													<p>Lastly, we need to implement the <b>behavior (logic)</b> of the clip using our <b>DialogueBehaviour</b> class by overriding the <b>CreatePlayable()</b> method.
+													<section class="media-article-content">
+														<pre><code class="language-csharp" data-ln-start-from="15">public override Playable CreatePlayable (PlayableGraph graph, GameObject owner)
+{
+var playable = ScriptPlayable&lt;DialogueBehaviour&gt;.Create (graph, template);
+return playable;
+}</code></pre>
+														<p>Code snippet of method to implement the DialogueBehaviour </p>
+													</section>
+													</p>
+												</li>
+												<li>
+													<p>The <b>CreatePlayable()</b> method is part of the <b>Playable</b> struct and is used to create a new clip. This method takes <b>PlayableGraph</b> and <b>GameObject</b> parameters, which are used to define the <b>PlayableGraph</b> of the current Timeline and the <b>owner GameObject</b> of the <b>PlayableGraph</b>. In our case, the <b>owner GameObject</b> is referred to as <b>Demo-Story1</b>.</p>
+												</li>
+											</ul>
+											<p>After creating our clip, the next step is to implement the desired logic using the <b>DialogueBehaviour</b> class. This allows us to define how the clip will behave and what actions it will perform.</p>
+											<section class="media-article-content">
+												<a href="gifs/P10_DialogueSystemDemo/P10_PreviewDemo14_Game_Mitos Atau Fakta Mobil Listrik.png" class="without-caption image-link">
+													<img class="image-article" src="gifs/P10_DialogueSystemDemo/P10_PreviewDemo14_Game_Mitos Atau Fakta Mobil Listrik.png" alt="" title="Creating the Timeline"/>
+												</a>
+												<p>The code of DialogueBehaviour script</p>
+											</section>
+										</li>
+									</ol>
+								</section>
+							</article>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<section id="footer">
+					<div class="container">
+						<div class="row" style="justify-content: center;">
+							<div class="col-4 col-12-medium">
+								<section>
+									<header>
+										<h2> <strong style="color: #ff4770;">Thanks for your visit!</strong> You can contact me here. </h2>
+									</header>
+									<ul class="contact">
+										<li>
+											<h3>Mail</h3>
+											<p><a href="mailto: mnaldy2001@gmail.com">mnaldy2001@gmail.com</a></p>
+										</li>
+										<li>
+											<h3>Phone</h3>
+											<p>+6285863745502</p>
+										</li>
+									</ul>
+									
+									
+								</section>
+							</div>
+							<div class="col-4 col-6-medium col-12-medium">
+								<section>
+									<header>
+										<h2>Also, feel free to explore my other portfolio!</h2>
+									</header>
+										<ul class="social">
+										<li><a class="icon brands fa-google-drive" href="https://bit.ly/PortofolioRinaldy" target="_blank" rel="noopener noreferrer"><span class="label">Google Drive</span></a></li>
+										<li><a class="icon brands fa-youtube" href="https://bit.ly/YoutubeRinaldy" target="_blank" rel="noopener noreferrer"><span class="label">Youtube</span></a></li>
+										<li><a class="icon brands fa-instagram" href="https://bit.ly/InstagramRinaldy" target="_blank" rel="noopener noreferrer"><span class="label">Instagram</span></a></li>
+										<li><a class="icon brands fa-artstation" href="https://bit.ly/ArtstationRinaldy" target="_blank" rel="noopener noreferrer"><span class="label">Artstation</span></a></li>
+										<li><a class="icon brands fa-linkedin" href="https://bit.ly/LinkedInRinaldy" target="_blank" rel="noopener noreferrer"><span class="label">LinkedIn</span></a></li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<!-- <script src="assets/js/jquery.min.js"></script> -->
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js/dist/highlightjs-line-numbers.min.js"></script>
+			<script>
+				hljs.highlightAll();
+				hljs.initLineNumbersOnLoad();
+			</script>
+			<script>
+
+				$('.without-caption').magnificPopup({
+				type: 'image',
+				closeOnContentClick: true,
+				closeBtnInside: false,
+				mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+				image: {
+					verticalFit: true
+				},
+				zoom: {
+					enabled: true,
+					duration: 300 // don't foget to change the duration also in CSS
+				}
+				});
+
+				$('.with-caption').magnificPopup({
+					type: 'image',
+					closeOnContentClick: true,
+					closeBtnInside: false,
+					mainClass: 'mfp-with-zoom mfp-img-mobile',
+					image: {
+						verticalFit: true,
+						titleSrc: function(item) {
+							return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+						}
+					},
+					zoom: {
+						enabled: true
+					}
+				});
+			</script>
+
+	</body>
+</html>
